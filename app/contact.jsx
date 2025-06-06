@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native'
+import { Link } from 'expo-router'
 import React from 'react'
 
 const Contact = () => {
@@ -12,7 +13,6 @@ const Contact = () => {
 }
 
 export default Contact
-
 
 const styles = StyleSheet.create({
     container: {
