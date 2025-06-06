@@ -1,10 +1,11 @@
 import { Text, View, Image, StyleSheet } from "react-native";
 import { Link } from "expo-router";
 import Logo from "../assets/images/react-logo.png";
+import ThemedView from "../components/ThemedView"
 
 export default function Index() {
   return (
-    <View style={styles.container}>
+    <ThemedView style={styles.container}>
       <Image source={Logo}></Image>
       <Text style={[styles.heading, { marginTop: 5 }]}>Home Page</Text>
 
@@ -12,7 +13,7 @@ export default function Index() {
         <Link href="/about" style={styles.link}>About</Link>
         <Link href="/contact" style={styles.link}>Contact</Link>
       </View>
-    </View>
+    </ThemedView>
   );
 }
 
