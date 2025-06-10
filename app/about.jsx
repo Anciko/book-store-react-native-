@@ -1,7 +1,12 @@
 import { StyleSheet, Text, useColorScheme } from 'react-native'
 import { Link } from 'expo-router'
 import { Colors } from '../constants/Colors'
-import ThemedView from "../components/ThemedView"
+
+/**
+ * Themed components
+ */
+import ThemedView from "../components/ThemedView";
+import ThemedText from "../components/ThemedText";
 
 const About = () => {
   const colorScheme = useColorScheme();
@@ -9,9 +14,11 @@ const About = () => {
 
   return (
     <ThemedView style={[styles.container, {backgroundColor: theme.background}]}>
-      <Text style={[styles.fs18, {color: theme.text}]}>About Page</Text>
+      <ThemedText style={[styles.fs18, {color: theme.text}]}>About Page</ThemedText>
 
-      <Link href="/" style={{ borderBottomWidth: 1 }}>Back To Home</Link>
+      <Link href="/" style={{ borderBottomWidth: 1 }}>
+        <ThemedText>Back To Home</ThemedText>
+      </Link>
     </ThemedView>
   )
 }
